@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hbg: rgb(143, 11, 11);
+  --bg1: rgb(212, 185, 185);
+  --bg2: rgb(34, 117, 23);
+  --bg3: rgb(114, 114, 131);
+  --fc1: white;
+  --fc2: black;
+  --fc3: rgb(141, 125, 125);
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  color: var(--fc1);
+}
+
+/* Spezifische Flexbox-Einstellungen für den Header */
+header {
+  grid-area: header;
+  background-color: var(--hbg);
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between; /* Logo links, Navi rechts */
+  align-items: center;
+  padding: 10px;
+  height: 100px;
+}
+
+.logo {
+  background: url(/img/logo.png) no-repeat center center / contain;
+  width: 100px;
+  height: 100px;
+  padding-left: 15em;
+}
+
+.navi {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-right: 5em;
+}
+
+/*Ende Header */
+
+/*Anfang Main*/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5fr 5fr 5fr 2fr;
+  grid-template-areas:
+    "cluster1 cluster2"
+    "cluster3 cluster4"
+    "cluster5 cluster6"
+    "usp picture"
+    "footer footer";
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+  padding-top: 5em;
+  background-color: white;
+}
+
+main > div {
+  display: flex;
+  color: var(--fc2);
+  font-weight: 800;
+}
+
+main > a div span {
+  display: flex;
+  color: var(--fc2);
+  font-weight: 800;
+}
+
+.abschatter {
+  color: var(--fc1);
+  font-weight: 800;
+  background-color: rgb(149, 155, 155);
+  width: 17em;
+  height: 4em;
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cluster1,
+.cluster2,
+.cluster3,
+.cluster4,
+.cluster5,
+.cluster6,
+.usp,
+footer {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.cluster1 {
+  grid-area: cluster1;
+  background: url(https://www.tobiaswald.de/wp-content/uploads/2019/05/Handwerk.jpeg)
+    no-repeat center center / cover;
+}
+.cluster2 {
+  grid-area: cluster2;
+  background-color: rgb(43, 137, 226);
+}
+.cluster3 {
+  grid-area: cluster3;
+  background-color: rgb(226, 177, 43);
+}
+.cluster4 {
+  grid-area: cluster4;
+  background-color: rgb(104, 102, 13);
+}
+.cluster5 {
+  grid-area: cluster5;
+  background-color: rgb(156, 12, 149);
+}
+.cluster6 {
+  grid-area: cluster6;
+  background-color: blueviolet;
+}
+/* USP Main */
+.usp {
+  grid-area: usp;
+  background-color: bisque;
+}
+
+.picture {
+  grid-area: picture;
+  background-color: aquamarine;
+}
+
+/*Ende Main*/
+
+/*FOOTER*/
+footer {
+  grid-area: footer;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--hbg);
+}
+
+/*FOOTER*/
+
+/*Navigation*/
+nav ul,
+footer ul {
+  display: flex;
+  list-style-type: none;
+}
+
+a {
+  padding: 10px;
+  margin: 10px;
+  /* margin-right: 1.5em; */
+  text-decoration: none;
+  color: var(--fc1);
+  font-size: 1.2em;
+}
+
+a:hover {
+  color: var(--fc3);
+}
+/*Navigation ENDE*/
+
+/* MEDIA*/
+/* main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5fr 5fr 5fr;
+  grid-template-areas:
+    "cluster1 cluster2"
+    "cluster3 cluster4"
+    "cluster5 cluster6";
+} */
