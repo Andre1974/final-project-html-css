@@ -138,6 +138,14 @@ footer {
 .usp {
   grid-area: usp;
   background-color: bisque;
+  justify-content: center;
+  align-items: center;
+}
+
+.uspInhalt{
+  
+  font-weight: 400;
+  padding: 20px;
 }
 
 .picture {
